@@ -1,0 +1,3 @@
+Description about program:
+This GUI program serves as a simple task manager, allowing users to add, remove, and view tasks.
+

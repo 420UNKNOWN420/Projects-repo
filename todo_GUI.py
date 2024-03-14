@@ -2,7 +2,6 @@ import tkinter as tk
 import tkinter.messagebox as messagebox
 
 
-
 def open_add_task_window():
     def add_task():
         with open("tasks.txt", "a") as file:
@@ -38,8 +37,8 @@ def open_task_list_window():
         
         for line in file.readlines():
             tk.Label(frame, text=line.strip()).pack(anchor='w')
-            
-            
+
+
 def open_delete_task_window():
     def delete_task():
         selected_indices = [i for i, var in enumerate(task_vars) if var.get() == 1]
@@ -66,6 +65,7 @@ def open_delete_task_window():
             tk.Checkbutton(task_frame, text=task.strip(), variable=var).pack(anchor="w")
 
     delete_task_window = tk.Toplevel()
+    delete_task_window.title("Remove Task")
     delete_task_window.geometry("400x400")
 
     display_tasks()
